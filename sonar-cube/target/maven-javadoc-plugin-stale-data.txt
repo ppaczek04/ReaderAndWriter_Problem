@@ -1,0 +1,47 @@
+@options
+@packages
+@argfile
+--class-path
+'C:/Users/DELL/Desktop/ReadersAndWriters/main/target/main-1.0.jar;C:/Users/DELL/Desktop/ReadersAndWriters/utils/target/utils-1.0.jar;C:/Users/DELL/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar;C:/Users/DELL/.m2/repository/commons-io/commons-io/2.14.0/commons-io-2.14.0.jar;C:/Users/DELL/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar;C:/Users/DELL/.m2/repository/org/apache/commons/commons-csv/1.10.0/commons-csv-1.10.0.jar;C:/Users/DELL/.m2/repository/org/apache/poi/poi-ooxml/5.2.5/poi-ooxml-5.2.5.jar;C:/Users/DELL/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.5/poi-ooxml-lite-5.2.5.jar;C:/Users/DELL/.m2/repository/org/apache/xmlbeans/xmlbeans/5.2.0/xmlbeans-5.2.0.jar;C:/Users/DELL/.m2/repository/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.jar;C:/Users/DELL/.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar;C:/Users/DELL/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar;C:/Users/DELL/.m2/repository/org/apache/poi/poi/5.2.5/poi-5.2.5.jar;C:/Users/DELL/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar;C:/Users/DELL/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar;C:/Users/DELL/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar;C:/Users/DELL/.m2/repository/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar;C:/Users/DELL/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.20.0/log4j-slf4j-impl-2.20.0.jar;C:/Users/DELL/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/DELL/Desktop/ReadersAndWriters/main/src/main/java;C:/Users/DELL/Desktop/ReadersAndWriters/main/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/DELL/Desktop/ReadersAndWriters/main/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'main - main app part 1.0 API'
+-use
+-version
+-windowtitle
+'main - main app part 1.0 API'
+org.example.lab.agh
+'C:/Users/DELL/Desktop/ReadersAndWriters/main/src/main/java/org/example/lab/agh/Main.java'
+C:\Users\DELL\Desktop\ReadersAndWriters\main\src\main\java = 1736601356407
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\generated-sources\annotations = 1736627382701
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\allclasses-index.html = 1736627400777
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\allpackages-index.html = 1736627400779
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\element-list = 1736627400751
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\help-doc.html = 1736627400792
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\index-all.html = 1736627400787
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\index.html = 1736627400788
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\jquery-ui.overrides.css = 1736627400812
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\member-search-index.js = 1736627400781
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\module-search-index.js = 1736627400780
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\overview-tree.html = 1736627400770
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\package-search-index.js = 1736627400780
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\script.js = 1736627400796
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\search.js = 1736627400798
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\stylesheet.css = 1736627400795
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\tag-search-index.js = 1736627400782
+C:\Users\DELL\Desktop\ReadersAndWriters\main\target\site\apidocs\type-search-index.js = 1736627400781

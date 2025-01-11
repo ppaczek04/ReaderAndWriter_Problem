@@ -70,8 +70,8 @@ public class Library {
      */
     public void runApp(){
 
-        Semaphore mutex = new Semaphore(1);
-        Semaphore writ = new Semaphore(1);
+        Semaphore readerSemaphore = new Semaphore(1);
+        Semaphore writerSemaphore = new Semaphore(1);
         Semaphore queue = new Semaphore(1);
 
         Reader[] readers = new Reader[numReaders];
@@ -79,11 +79,11 @@ public class Library {
 
         for(int i = 0; i<numReaders; i++){
             System.out.printf("**Reader %d. initiated**%n",i+1);
-            readers[i] = new Reader(i+1, mutex, writ, queue, this);
+            readers[i] = new Reader(i+1, readerSemaphore, writerSemaphore, queue, this);
         }
         for(int i = 0; i<numWriters; i++){
             System.out.printf("**Writer %d. initiated**%n",i+1);
-            writers[i] = new Writer(i+1, mutex, writ,  queue, this);
+            writers[i] = new Writer(i+1, readerSemaphore, writerSemaphore,  queue, this);
         }
 
         Arrays.stream(writers).forEach(Thread::start);
