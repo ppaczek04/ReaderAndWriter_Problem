@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Writer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">utils - used classes</a> &gt; <a href="index.source.html" class="el_package">org.example.lab.agh</a> &gt; <span class="el_source">Writer.java</span></div><h1>Writer.java</h1><pre class="source lang-java linenums">package org.example.lab.agh;
+
+import java.util.concurrent.Semaphore;
+
+/**
+ * The {@code Writer} class represents a writer thread in the library simulation.
+ * Writers attempt to gain exclusive access to the library for writing, respecting
+ * synchronization constraints defined by semaphores and shared state in the {@code Library}.
+ *
+ * Each writer is identified by a unique ID and interacts with the library
+ * to manage its access and state transitions.
+ */
+public class Writer extends Thread {
+
+    /**
+     * The unique identifier of the writer.
+     */
+    Integer iD;
+
+    /**
+     * A semaphore used to synchronize access to the shared read count and other critical sections.
+     */
+    Semaphore mutex;
+
+    /**
+     * A semaphore ensuring exclusive access for writers to the library.
+     */
+    Semaphore writ;
+
+    /**
+     * A semaphore used as a queue mechanism to manage entry order.
+     */
+    Semaphore queue;
+
+    /**
+     * A reference to the shared {@code Library} object that manages readers and writers.
+     */
+    Library library;
+
+    /**
+     * Constructs a new {@code Writer} instance with the given ID and semaphores.
+     *
+     * @param idk   the unique ID of the writer
+     * @param one   the semaphore for synchronizing access to shared variables
+     * @param two   the semaphore for controlling writer access to the library
+     * @param three the semaphore for queue management
+     * @param lib   the shared {@code Library} instance
+     */
+<span class="fc" id="L49">    public Writer(Integer idk, Semaphore one, Semaphore two, Semaphore three, Library lib){</span>
+<span class="fc" id="L50">        iD = idk;</span>
+<span class="fc" id="L51">        mutex = one;</span>
+<span class="fc" id="L52">        writ = two;</span>
+<span class="fc" id="L53">        queue = three;</span>
+<span class="fc" id="L54">        library = lib;</span>
+<span class="fc" id="L55">    }</span>
+
+    /**
+     * The main execution method of the writer thread.
+     * Writers repeatedly:
+     * &lt;ul&gt;
+     *     &lt;li&gt;Join the waiting list.&lt;/li&gt;
+     *     &lt;li&gt;Attempt to acquire access to the library.&lt;/li&gt;
+     *     &lt;li&gt;Write for a specified duration.&lt;/li&gt;
+     *     &lt;li&gt;Release access and wait before the next writing attempt.&lt;/li&gt;
+     * &lt;/ul&gt;
+     * Synchronization is achieved through semaphores and interaction
+     * with the {@code Library}.
+     */
+    @Override
+    public void run(){
+        for (;;) {
+            try {
+<span class="fc" id="L73">                synchronized (library) {</span>
+<span class="fc" id="L74">                    library.waitingWriters.add(iD); // Dodajemy do listy oczekujących</span>
+<span class="fc" id="L75">                    System.out.printf(&quot;Writer %d is waiting. Waiting writers: %s. Waiting readers: %s.%n&quot;,</span>
+                            iD, library.waitingWriters, library.waitingReaders);
+<span class="fc" id="L77">                }</span>
+
+<span class="fc" id="L79">                queue.acquire(); // Pisarz wchodzi do kolejki</span>
+<span class="fc" id="L80">                writ.acquire();</span>
+<span class="fc" id="L81">                queue.release(); // Pisarz opuszcza kolejkę</span>
+<span class="fc" id="L82">                library.startWriting(this);</span>
+<span class="fc" id="L83">                System.out.println(&quot;WRITING&quot;);</span>
+<span class="nc" id="L84">                sleep(Constants.TIME_SPENT_WRITING);</span>
+<span class="nc" id="L85">                library.stopWriting(this);</span>
+<span class="nc" id="L86">                writ.release();</span>
+<span class="nc" id="L87">                sleep(Constants.TIME_SPENT_NOT_WRITING);</span>
+<span class="fc" id="L88">            }catch (InterruptedException e) {</span>
+<span class="fc" id="L89">                Thread.currentThread().interrupt();</span>
+<span class="fc" id="L90">                System.out.println(&quot;Thread interrupted: {}&quot; + e.getMessage() + e);</span>
+<span class="fc" id="L91">                return;</span>
+<span class="nc" id="L92">            } catch (Exception e) {</span>
+<span class="nc" id="L93">                System.out.println(&quot;An unexpected error occurred: {}&quot; + e.getMessage() + e);</span>
+<span class="nc" id="L94">            }</span>
+        }
+    }
+
+    /**
+     * Gets the ID of the writer.
+     *
+     * @return the writer's ID
+     */
+    public Integer getIDofWriter() {
+<span class="fc" id="L104">        return iD;</span>
+    }
+
+    /**
+     * Sets the ID of the writer.
+     *
+     * @param iD the new ID for the writer
+     */
+    public void setIDofWriter(Integer iD) {
+<span class="fc" id="L113">        this.iD = iD;</span>
+<span class="fc" id="L114">    }</span>
+
+    /**
+     * Gets the semaphore used for synchronizing access to shared variables.
+     *
+     * @return the mutex semaphore
+     */
+    public Semaphore getMutex() {
+<span class="fc" id="L122">        return mutex;</span>
+    }
+
+    /**
+     * Sets the semaphore used for synchronizing access to shared variables.
+     *
+     * @param mutex the new mutex semaphore
+     */
+    public void setMutex(Semaphore mutex) {
+<span class="fc" id="L131">        this.mutex = mutex;</span>
+<span class="fc" id="L132">    }</span>
+
+    /**
+     * Gets the semaphore ensuring exclusive access for writers.
+     *
+     * @return the writing semaphore
+     */
+    public Semaphore getWrit() {
+<span class="fc" id="L140">        return writ;</span>
+    }
+
+    /**
+     * Sets the semaphore ensuring exclusive access for writers.
+     *
+     * @param writ the new writing semaphore
+     */
+    public void setWrit(Semaphore writ) {
+<span class="fc" id="L149">        this.writ = writ;</span>
+<span class="fc" id="L150">    }</span>
+
+    /**
+     * Gets the semaphore used for managing the writer's queue.
+     *
+     * @return the queue semaphore
+     */
+    public Semaphore getQueue() {
+<span class="fc" id="L158">        return queue;</span>
+    }
+
+    /**
+     * Sets the semaphore used for managing the writer's queue.
+     *
+     * @param queue the new queue semaphore
+     */
+    public void setQueue(Semaphore queue) {
+<span class="fc" id="L167">        this.queue = queue;</span>
+<span class="fc" id="L168">    }</span>
+
+    /**
+     * Gets the library associated with this writer.
+     *
+     * @return the library instance
+     */
+    public Library getLibrary() {
+<span class="fc" id="L176">        return library;</span>
+    }
+
+    /**
+     * Sets the library associated with this writer.
+     *
+     * @param library the new library instance
+     */
+    public void setLibrary(Library library) {
+<span class="fc" id="L185">        this.library = library;</span>
+<span class="fc" id="L186">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,55 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/DELL/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar;C:/Users/DELL/.m2/repository/commons-io/commons-io/2.14.0/commons-io-2.14.0.jar;C:/Users/DELL/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar;C:/Users/DELL/.m2/repository/org/apache/commons/commons-csv/1.9.0/commons-csv-1.9.0.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/DELL/Desktop/ReadersAndWriters/utils/src/main/java;C:/Users/DELL/Desktop/ReadersAndWriters/utils/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/DELL/Desktop/ReadersAndWriters/utils/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'utils - used classes 1.0 API'
+-use
+-version
+-windowtitle
+'utils - used classes 1.0 API'
+org.example.lab.agh
+'C:/Users/DELL/Desktop/ReadersAndWriters/utils/src/main/java/org/example/lab/agh/Constants.java'
+'C:/Users/DELL/Desktop/ReadersAndWriters/utils/src/main/java/org/example/lab/agh/Library.java'
+'C:/Users/DELL/Desktop/ReadersAndWriters/utils/src/main/java/org/example/lab/agh/Reader.java'
+'C:/Users/DELL/Desktop/ReadersAndWriters/utils/src/main/java/org/example/lab/agh/Writer.java'
+C:\Users\DELL\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar = 1730226522868
+C:\Users\DELL\.m2\repository\commons-io\commons-io\2.14.0\commons-io-2.14.0.jar = 1730273948109
+C:\Users\DELL\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar = 1722005438242
+C:\Users\DELL\.m2\repository\org\apache\commons\commons-csv\1.9.0\commons-csv-1.9.0.jar = 1730236215877
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\src\main\java = 1736601357117
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\generated-sources\annotations = 1736619720580
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\allclasses-index.html = 1736619726075
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\allpackages-index.html = 1736619726078
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\constant-values.html = 1736619726040
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\element-list = 1736619726016
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\help-doc.html = 1736619726101
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\index-all.html = 1736619726095
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\index.html = 1736619726097
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\jquery-ui.overrides.css = 1736619726111
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\member-search-index.js = 1736619726081
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\module-search-index.js = 1736619726079
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\overview-tree.html = 1736619726064
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\package-search-index.js = 1736619726080
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\script.js = 1736619726103
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\search.js = 1736619726105
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\stylesheet.css = 1736619726102
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\tag-search-index.js = 1736619726082
+C:\Users\DELL\Desktop\ReadersAndWriters\utils\target\site\apidocs\type-search-index.js = 1736619726080

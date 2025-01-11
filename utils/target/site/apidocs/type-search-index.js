@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.example.lab.agh","l":"Constants"},{"p":"org.example.lab.agh","l":"Library"},{"p":"org.example.lab.agh","l":"Reader"},{"p":"org.example.lab.agh","l":"Writer"}];updateSearchResults();
