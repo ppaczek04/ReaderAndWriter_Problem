@@ -1,6 +1,0 @@
-projectKey=ReadersAndWriters_jacoco
-serverUrl=http://localhost:9000
-serverVersion=10.7.0.96327
-dashboardUrl=http://localhost:9000/dashboard?id=ReadersAndWriters_jacoco
-ceTaskId=ad20168f-949c-4e5c-bd0b-3b392084d7d7
-ceTaskUrl=http://localhost:9000/api/ce/task?id=ad20168f-949c-4e5c-bd0b-3b392084d7d7

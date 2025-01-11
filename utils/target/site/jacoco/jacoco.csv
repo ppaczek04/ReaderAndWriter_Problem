@@ -1,4 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-utils - used classes,org.example.lab.agh,Library,0,327,0,4,0,58,0,14,0,12
-utils - used classes,org.example.lab.agh,Writer,27,124,0,0,7,35,0,12,0,12
-utils - used classes,org.example.lab.agh,Reader,30,141,2,2,8,38,1,13,0,12

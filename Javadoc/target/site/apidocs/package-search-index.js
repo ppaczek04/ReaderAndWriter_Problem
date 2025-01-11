@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.example.lab.agh"},{"l":"org.example.lab.agh.command_package"},{"l":"org.example.lab.agh.model_package"}];updateSearchResults();
