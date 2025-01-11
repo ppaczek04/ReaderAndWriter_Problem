@@ -14,7 +14,7 @@ isn't exceeded.
 by creating FIFO queue (First In First Out) for Threads. So when thread leaves the library, it enters queue form the back and waits for
 its turn.
 
-**Hope you find my problem-solution implemetation helpful!**
+**Hope you find my problem-solution git implementation helpful!**
 
 # Usage tutorial
 To see the logs of readers and writers objects performing actions on a shared resource 
